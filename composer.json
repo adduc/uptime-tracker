@@ -1,0 +1,19 @@
+{
+    "name": "adduc/uptime.d0.128.io",
+    "authors": [
+        {
+            "name": "John Long",
+            "email": "a@88k.us"
+        }
+    ],
+    "autoload": {
+        "classmap": ["app/Controller", "app/Core", "app/Exception", "app/Model"]
+    },
+    "require": {
+
+    },
+    "config": {
+        "vendor-dir": "app/Vendor",
+        "bin-dir": "app/Vendor/bin"
+    }
+}

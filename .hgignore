@@ -1,0 +1,4 @@
+app/Vendor
+config/nginx-phpfpm/nginx.conf
+config/nginx-phpfpm/phpfpm.conf
+logs/
