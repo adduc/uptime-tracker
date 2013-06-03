@@ -4,7 +4,17 @@ namespace Adduc\Uptime\Controller;
 
 class Exception extends Controller {
 
-    public function run($url_segments, \Exception $e = null) {
+    protected $exception;
+
+    public function setException() {
+
+    }
+
+    public function identifyMethod() {
+        return array($this, "errorAction");
+    }
+
+    public function errorAction() {
 
     }
 

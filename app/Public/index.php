@@ -22,6 +22,10 @@ try {
     $c->run($segments);
 
 } catch(\Exception $e) {
-    $c = new Controller\Exception();
-    $c->run($segments, $e);
+    try {
+        $c = new Controller\Exception();
+        $c->run($segments, $e);
+    } catch(\Exception $e) {
+        die('Something went horribly wrong.');
+    }
 }
