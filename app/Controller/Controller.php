@@ -13,15 +13,17 @@ abstract class Controller {
             'view' => null,
             'layout' => null,
             'vars' => array()
-        );
+        ),
+        $config;
 
     public function run($url_segments) {
         $this->url_segments = $url_segments;
         $action = $this->identifyMethod();
         $action();
-        $view_class = is_object($this->view['class'])
+        $this->view['class'] = is_object($this->view['class'])
             ? $this->view['class'] : new Core\View();
-
+        $this->config = $this->config instanceof Core\Config ? $this->config
+            : new Core\Config(dirname(__DIR__) . '/Config/config.ini');
     }
 
     function identifyMethod() {
