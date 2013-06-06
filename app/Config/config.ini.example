@@ -1,0 +1,5 @@
+[db]
+username = "username"
+password = "password"
+hostname = "localhost"
+database = "database"
