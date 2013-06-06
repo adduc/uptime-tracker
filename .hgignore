@@ -2,3 +2,7 @@ app/Vendor
 config/nginx-phpfpm/nginx.conf
 config/nginx-phpfpm/phpfpm.conf
 logs/
+
+syntax:glob
+*.bak
+app/Config/*.ini
